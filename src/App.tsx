@@ -1,6 +1,7 @@
 import cat from "./assets/cat-typing.gif"
 import CountdownTimer from "./components/CountDownTimer"
 import { Button } from "./components/ui/button"
+import FAQ from "./components/FAQ"
 const App = () => {
   return (
     <div>
@@ -12,6 +13,8 @@ const App = () => {
      <div className="flex justify-center"><img src={cat} alt="open-source-cat" /></div>
 
      <div className="flex flex-col items-center justify-center"><h1 className="text-xl pt-5 font-extrabold">Time till hackathon starts:</h1><CountdownTimer/></div>
+
+     <FAQ/>
     </div>
   )
 }
