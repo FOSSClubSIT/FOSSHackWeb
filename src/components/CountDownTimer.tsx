@@ -11,7 +11,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className='bg-gray-100 dark:bg-inherit min-h-10 min-w-full mt-8 flex flex-col items-center justify-center sm:flex-row sm:justify-between py-24 px-8 m-10 mb-32'>
+    <div className='bg-gray-100 dark:bg-inherit min-h-10 min-w-full mt-8 flex flex-col items-center justify-center sm:flex-row sm:justify-between py-24 px-8 m-10 mb-20'>
       <div className="countdown flex flex-col items-center justify-center flex-1">
         <span>
         <h1 className='text-3xl font-extrabold'>Cash Prize up to ₹10 lakhs</h1>

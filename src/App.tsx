@@ -3,12 +3,13 @@ import CountdownTimer from "./components/CountDownTimer";
 import { Button } from "./components/ui/button";
 import FAQ from "./components/FAQ";
 import Why from "./components/Why";
+import Rules from "./components/Rules";
 
 const App = () => {
   return (
     <>
     <div className="flex flex-col items-center justify-center min-h-screen space-y-6">
-      <div className="text-center mt-40">
+      <div className="text-center mt-24">
         <p className="font-black text-3xl sm:text-5xl mb-2">
           <span className="text-green-500">FOSS</span>Hack is Back!!!
         </p>
@@ -30,6 +31,7 @@ const App = () => {
       <div className="flex flex-col items-center justify-center">
         <CountdownTimer />
       </div>
+      <Rules/>
 
      
     </div>

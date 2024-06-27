@@ -9,7 +9,7 @@ const Header = () => {
         </div>
    
 <div className="flex max-w-6xl justify-center items-center sm:mr-5"> 
-<Button className="mr-3"><a href={"https://fossunited.org/login?redirect-to=/dashboard/register-for-hackathon?id=lmj5ossbbb#login"}>Register</a> </Button>
+{/* <Button className="mr-3"><a href={"https://fossunited.org/login?redirect-to=/dashboard/register-for-hackathon?id=lmj5ossbbb#login"}>Register</a> </Button> */}
       <ModeToggle/>
       </div>
      
