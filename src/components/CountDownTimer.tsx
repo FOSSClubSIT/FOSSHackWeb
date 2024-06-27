@@ -1,60 +1,30 @@
-// src/CountdownTimer.tsx
-
-import React, { useState, useEffect } from 'react';
-
-interface TimeLeft {
-  days?: number;
-  hours?: number;
-  minutes?: number;
-  seconds?: number;
-}
-
-const CountdownTimer: React.FC = () => {
-  const calculateTimeLeft = (): TimeLeft => {
-    const difference = +new Date(`2024-07-27`) - +new Date();
-    let timeLeft: TimeLeft = {};
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [timeLeft]);
-
-  const timerComponents: JSX.Element[] = [];
-
-  Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval as keyof TimeLeft]) {
-      return;
-    }
-
-    timerComponents.push(
-      <span key={interval}>
-        {timeLeft[interval as keyof TimeLeft]} {interval}{" "}
+import React from 'react';
+import Countdown from 'react-countdown';
+import rupee from '../assets/ruppee.png'
+const App: React.FC = () => {
+  const countdownRenderer = ({ days, hours, minutes, seconds }: any) => {
+    return (
+      <span>
+        {days} days {hours}:{minutes}:{seconds}
       </span>
     );
-  });
+  };
 
   return (
-    <div className='font-extrabold md:text-4xl pb-10'>
-      {timerComponents.length ? timerComponents : <span><span className='text-green-500 font-extrabold'>Hackathon</span> has begun!</span>}
+    <div className='bg-gray-100 min-h-10 min-w-full mt-8 flex flex-col items-center justify-center sm:flex-row sm:justify-between px-8 m-10'>
+      <div className="countdown flex flex-col items-center justify-center flex-1">
+        <h1 className='text-3xl font-extrabold'>Cash Prize up to ₹10 lakhs</h1>
+        <p>Hackathon starts in:</p>
+        <Countdown
+          date={new Date('2024-07-27T12:00:00')}
+          renderer={countdownRenderer}
+        />
+      </div>
+      <div className="image flex-1">
+        <img className='' src={rupee} alt="" />
+      </div>
     </div>
   );
 };
 
-export default CountdownTimer;
+export default App;

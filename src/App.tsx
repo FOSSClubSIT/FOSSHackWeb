@@ -12,9 +12,12 @@ const App = () => {
       </div>
      <div className="flex justify-center"><img src={cat} alt="open-source-cat" /></div>
 
-     <div className="flex flex-col items-center justify-center"><h1 className="text-xl pt-5 font-extrabold">Time till hackathon starts:</h1><CountdownTimer/></div>
+     <div className="flex flex-col items-center justify-center"><CountdownTimer/></div>
 
-     <FAQ/>
+    
+    <FAQ/>
+    
+   
     </div>
   )
 }
