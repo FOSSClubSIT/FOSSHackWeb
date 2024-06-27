@@ -4,7 +4,6 @@ import { useState } from "react"
 
 const Why = () => {
 const [toggle,settoggle] = useState(true)
-console.log(toggle)
   return (
     <div className="max-w-md sm:max-w-[600px] lg:max-w-[900px] mx-auto sm:ml-20 sm:justify-start text-wrap mb-44">
         <div className="title mb-20 ">
