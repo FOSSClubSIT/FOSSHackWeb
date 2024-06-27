@@ -27,8 +27,8 @@ console.log(toggle)
                 <li>The participants will have access to forum with the maintainers to get onboarding to the project, codebase and other related queries and support.</li>
             </ul>
             <button className="box-border p-3 border-2 border-green-400 text-green-400 rounded-lg mt-4 hover:text-green-700 hover:border-green-700">
-                Explore projects
-            </button>
+               <a href={"https://fossunited.org/fh24/partner-projects"}>Explore Projects</a> 
+               </button>
             </>
         ):(
             <>
