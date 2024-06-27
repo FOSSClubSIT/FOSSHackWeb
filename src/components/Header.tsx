@@ -1,6 +1,6 @@
 import { ModeToggle } from "./mode-toggle"
 import foss from "/foss.svg"
-import { Button } from "./ui/button"
+
 const Header = () => {
   return (
     <div className="dark:invert  flex flex-col sm:flex-row sm:justify-between items-center">
