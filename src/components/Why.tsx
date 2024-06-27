@@ -20,13 +20,13 @@ console.log(toggle)
         <hr />
         {toggle ? (
             <>
-            <ul>
+            <ul className="list-disc mt-1">
                 <li>The partner projects programme offers a curated list of open source projects with issues, for FOSS Hack participants to work on.</li>
                 <li>The participants can look-up issues in a curated list of projects, and propose to contribute to them.</li>
                 <li>Once assigned, these issues can be worked on, and PRs generated.</li>
                 <li>The participants will have access to forum with the maintainers to get onboarding to the project, codebase and other related queries and support.</li>
             </ul>
-            <button className="box-border ">
+            <button className="box-border p-3 border-2 border-green-400 text-green-400 rounded-lg mt-4 hover:text-green-700 hover:border-green-700">
                 Explore projects
             </button>
             </>
